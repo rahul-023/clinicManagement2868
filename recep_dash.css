@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #f1f5f9, #e0f2fe);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 15px;
+  color: #2c3e50;
+  padding: 25px;
+}
+
+/* Main Container */
+.dashboard-container {
+  max-width: 1100px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 35px 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h2 {
+  color: #1a237e;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 14.5px;
+  color: #555;
+}
+
+h3 {
+  margin-top: 35px;
+  color: #2d3748;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+h4 {
+  margin: 30px 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  flex: 1 1 30%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1e40af;
+  transform: scale(1.03);
+}
+
+/* Refresh Button */
+.refresh-btn {
+  background-color: #334155;
+  padding: 8px 14px;
+  font-size: 13.5px;
+  border-radius: 5px;
+}
+
+/* Returning Visitor Prompt */
+#returningVisitorPrompt {
+  border: 1px solid #f6c23e;
+  background-color: #fff8dc;
+  color: #856404;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 15px;
+}
+
+#visitorPreview {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+thead th {
+  background-color: #1e3a8a; /* Restored solid blue */
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+tbody td {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* Send In Section */
+.send-in-container {
+  margin-top: 25px;
+}
+
+.send-in-container input[type="number"] {
+  padding: 9px;
+  width: 220px;
+  margin-right: 12px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+/*Show all visitors button*/
+.all-btn {
+  background-color: #0d9488;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.right-button-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+
+.all-btn:hover {
+  background-color: #0f766e;
+}
+
+.close-btn {
+  background-color: #e11d48;
+  color: white;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  border: none;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #be123c;
+}
+
+
+/* Logout Button */
+.dashboard-container > button:last-of-type {
+  background-color: #e11d48;
+  margin-top: 30px;
+}
+
+.dashboard-container > button:last-of-type:hover {
+  background-color: #be123c;
+}
+
+/* Success Message */
+.success-message {
+  color: #059669;
+  font-size: 14px;
+  margin: 10px 0;
+}

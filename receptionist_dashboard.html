@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Receptionist Dashboard</title>
+  <link rel="stylesheet" href="recep_dash.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h2>Receptionist Dashboard</h2>
+    <p>Welcome, Receptionist!</p>
+
+    <form id="visitorForm">
+      <input type="text" id="visitorName" class="form-input" placeholder="Name" required />
+      <input type="text" id="visitorPhone" class="form-input" placeholder="Phone Number" required />
+      <input type="email" id="visitorEmail" class="form-input" placeholder="E-mail" required />
+      <input type="number" id="visitorAge" class="form-input" placeholder="Age" required  min="1" />
+      <select id="visitorSex" class="form-input" required>
+        <option value="">Select Sex</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="number" id="tokenAmount" class="form-input" placeholder="Token Amount" required min="1"  />
+
+      <button type="button" id="registerBtn">Register Visitor</button>
+      <button type="submit">Add Visitor</button>
+    </form>
+
+    <!-- Returning visitor prompt -->
+    <div id="returningVisitorPrompt" style="display: none; margin-top: 10px; background: #ffeeba; padding: 10px;">
+      <p>Returning visitor detected. Use previous data?</p>
+      <div id="visitorPreview"></div>
+      <button type="button" onclick="acceptReturningVisitor()">Yes</button>
+      <button type="button" onclick="declineReturningVisitor()">No</button>
+    </div>
+
+    <p id="message" class="success-message"></p>
+
+    <div class="send-in-container">
+      <h4>Send Visitors to Doctor</h4>
+      <input type="number" id="sendInToken" placeholder="Enter Token Number" min="1" />
+      <button onclick="sendInVisitors()">Send In</button>
+    </div>
+    <div class="right-button-container">
+      <button class="all-btn" onclick="loadAllRegisteredVisitors()">Show All Visitors</button>
+      </div>
+
+    <h3>Today's Visit Logs
+      <button class="refresh-btn" onclick="loadVisitors()">Refresh</button>
+    </h3>
+
+    <div id="allRegisteredVisitorsSection" style="display: none; margin-top: 20px;">
+  <button class="close-btn" onclick="closeAllRegisteredVisitors()">Close</button>
+  <table id="registeredVisitorTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Registered On</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+    <table id="visitorTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Sex</th>
+          <th>Token Amount</th>
+          <th>Timestamp</th>
+          <th>Prescription</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <br />
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="recep_dash.js"></script>
+</body>
+</html>

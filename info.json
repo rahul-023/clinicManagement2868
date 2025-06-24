@@ -1,0 +1,12 @@
+{
+  "users": {
+    "doctor2868": {
+      "email": "doctor2868@gmail.com",
+      "role": "doctor"
+    },
+    "receptionist2868": {
+      "email": "receptionist2868@gmail.com",
+      "role": "receptionist"
+    }
+  }
+}

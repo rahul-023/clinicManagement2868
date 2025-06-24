@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor-Dashboard</title>
+  <link rel="stylesheet" href="doctor_dash.css" />
+</head>
+<body>
+  <body>
+  <div class="login-box">
+    <h2>Dr.Bruce Banner</h2>
+    <p>Welcome, Doctor!</p>
+    <div class="button-group">
+      <button onclick="sendNextVisitorAlert()">Send Next Visitor</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <h3>All Registered Visitors</h3>
+<button class="all-btn" onclick="loadAllRegisteredVisitors()">Show All Visitors</button>
+
+<div id="allRegisteredVisitorsSection" style="display: none; margin-top: 20px;">
+  <button class="close-btn" onclick="closeAllRegisteredVisitors()">Close</button>
+  <table id="registeredVisitorTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Registered On</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+
+    <h3>Incoming Visitors</h3>
+
+    <table id="doctorTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Sex</th>
+          <th>Token Amount</th>
+          <th>Previous Prescriptions</th>
+          <th>Prescription</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+    <script src="doctor_dash.js"></script>
+
+</body>
+
+</body>
+</html>

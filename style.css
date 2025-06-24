@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* Reusable container */
+.login-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  width: 360px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.login-box h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+
+/* Inputs and dropdowns */
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 0 4px #00c6ff;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00c6ff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #009bbd;
+}
+
+/* Error message */
+#error {
+  margin-top: 10px;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 420px) {
+  .login-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  input, select, button {
+    font-size: 0.95rem;
+  }
+}
